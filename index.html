@@ -2,144 +2,130 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>МОЗ НПУ — Керівництво</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>МОЗ України RP</title>
   <style>
-    :root {
-      --bg: #fff0f5;
-      --primary: #ff69b4;
-      --accent: #dda0dd;
-      --card: #ffe6f0;
-      --text: #551a4a;
-      --white: #ffffff;
-    }
-
     body {
       margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #fce4ec, #f3e5f5);
-      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://i.imgur.com/X7iU3A5.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-
     header {
-      background: var(--white);
-      padding: 25px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.25);
-      border-bottom: 4px solid var(--primary);
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
-      color: var(--primary);
-      letter-spacing: 1px;
+      font-size: 2em;
+      color: #00ffc3;
+      text-shadow: 2px 2px #000;
     }
-
     nav {
-      margin-top: 15px;
+      margin-top: 10px;
     }
-
     nav a {
-      display: inline-block;
-      margin: 6px;
-      padding: 10px 20px;
-      background: var(--accent);
-      color: var(--white);
-      border-radius: 25px;
+      margin: 0 15px;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
+      font-weight: bold;
     }
-
-    nav a:hover {
-      background: var(--primary);
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    }
-
-    main h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      color: var(--primary);
-    }
-
-    .leadership {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .leader-card {
-      background: var(--card);
+    .section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 30px auto;
       padding: 20px;
-      border-radius: 20px;
-      width: 160px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(221, 160, 221, 0.3);
-      transition: transform 0.3s ease;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
     }
-
-    .leader-card:hover {
-      transform: translateY(-5px);
+    .section h2 {
+      color: #00ffc3;
+      border-bottom: 2px solid #00ffc3;
+      padding-bottom: 5px;
     }
-
-    .leader-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--primary);
-      background: var(--white);
-      margin-bottom: 12px;
+    .doctor-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
     }
-
-    .position {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 5px;
-    }
-
-    .name {
-      font-size: 1.1rem;
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    footer {
+    .footer {
       text-align: center;
       padding: 20px;
-      color: #aa6699;
-      font-size: 0.95rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    a.button {
+      display: inline-block;
+      background: #00ffc3;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background: #00caa6;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>МОЗ — Керівництво</h1>
+    <h1>МОЗ України RP</h1>
     <nav>
-      <a href="index.html">Головна</a>
-      <a href="nakazy.html">Накази</a>
-      <a href="grafik.html">Графік</a>
+      <a href="#home">Головна</a>
+      <a href="#protocols">Протоколи</a>
+      <a href="#team">Лікарі</a>
+      <a href="#contact">Контакти</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Наші Лідери</h2>
-    <div class="leadership">
-      <div class="leader-card">
-        <img src="general.png" alt="Генерал Ваня Бішоп" />
-        <div class="position">Генерал</div>
-        <div class="name">Ваня Б
+  <section class="section" id="home">
+    <h2>Вітаємо!</h2>
+    <p>Це внутрішній портал Міністерства охорони здоров'я України у всесвіті San Ukraine RP. Тут зберігається службова інформація, протоколи, а також доступ до бази лікарів.</p>
+  </section>
+
+  <section class="section" id="protocols">
+    <h2>Протоколи</h2>
+    <ul>
+      <li>Алгоритм надання першої медичної допомоги</li>
+      <li>Правила евакуації постраждалих</li>
+      <li>Поводження з небезпечними речовинами</li>
+      <li>Регламент медичних дій під час ЧС</li>
+    </ul>
+    <a href="#" class="button">Завантажити документи</a>
+  </section>
+
+  <section class="section" id="team">
+    <h2>Наша команда</h2>
+    <div class="doctor-card">
+      <strong>Д-р Іван Ткаченко</strong><br />
+      Головний хірург | San Ukraine RP Hospital
+    </div>
+    <div class="doctor-card">
+      <strong>Д-р Ольга Лісова</strong><br />
+      Лікар швидкої | Підрозділ №2, Kyiv RP
+    </div>
+    <div class="doctor-card">
+      <strong>Д-р Макс Пономаренко</strong><br />
+      Психіатр | Центр реабілітації San Ukraine RP
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Контакти</h2>
+    <p>Телефон: +380 800 500 700</p>
+    <p>Email: moz-rp@ukr.gov</p>
+    <p>Адреса RP: Kyiv Street 13, Центральна Лікарня RP</p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 МОЗ України RP | RP-сервер San Ukraine
+  </footer>
+</body>
+</html>
