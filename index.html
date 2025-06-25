@@ -7,10 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fff0f5;
+      --bg1: #ffe6f0;
+      --bg2: #fce4ec;
       --primary: #ff69b4;
       --accent: #dda0dd;
-      --card: #ffe6f0;
+      --card: #fff5fa;
       --text: #551a4a;
       --white: #ffffff;
     }
@@ -18,23 +19,31 @@
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #fce4ec, #f3e5f5);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color: var(--text);
     }
 
     header {
       background: var(--white);
-      padding: 25px 20px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.25);
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25);
       border-bottom: 4px solid var(--primary);
+      position: relative;
+    }
+
+    header img.logo {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       color: var(--primary);
-      letter-spacing: 1px;
     }
 
     nav {
@@ -58,7 +67,7 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 30px;
       background: var(--white);
@@ -68,7 +77,7 @@
 
     main h2 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 30px;
       color: var(--primary);
     }
@@ -77,7 +86,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
     }
 
     .leader-card {
@@ -95,13 +104,13 @@
     }
 
     .leader-card img {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid var(--primary);
       background: var(--white);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .position {
@@ -112,7 +121,7 @@
     }
 
     .name {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text);
       font-weight: 700;
     }
@@ -128,45 +137,68 @@
 <body>
 
   <header>
+    <img src="logo.png" alt="Логотип МОЗ" class="logo" />
     <h1>МОЗ — Керівництво</h1>
     <nav>
-      <a href="index.html">Головна</a>
-      <a href="nakazy.html">Накази</a>
-      <a href="grafik.html">Графік</a>
+      <a href="#">Головна</a>
+      <a href="#">Накази</a>
+      <a href="#">Графік</a>
     </nav>
   </header>
 
   <main>
-    <h2>Наші Лідери</h2>
+    <h2>Наше Керівництво</h2>
     <div class="leadership">
+
+      <!-- Лідер -->
       <div class="leader-card">
-        <img src="general.png" alt="Генерал Ваня Бішоп" />
+        <img src="leader1.png" alt="Генерал Ваня Бішоп" />
         <div class="position">Генерал</div>
         <div class="name">Ваня Бішоп</div>
       </div>
 
+      <!-- Заступники -->
       <div class="leader-card">
-        <img src="deputy.png" alt="Заступник Олена Войтюк" />
+        <img src="deputy1.png" alt="Заступник 1" />
         <div class="position">Заступник</div>
         <div class="name">Олена Войтюк</div>
       </div>
 
       <div class="leader-card">
-        <img src="hr.png" alt="Кадровик Петро Савчук" />
-        <div class="position">Кадровик</div>
+        <img src="deputy2.png" alt="Заступник 2" />
+        <div class="position">Заступник</div>
         <div class="name">Петро Савчук</div>
       </div>
 
       <div class="leader-card">
-        <img src="curator.png" alt="Куратор Ірина Коваль" />
-        <div class="position">Куратор</div>
+        <img src="deputy3.png" alt="Заступник 3" />
+        <div class="position">Заступник</div>
         <div class="name">Ірина Коваль</div>
       </div>
+
+      <div class="leader-card">
+        <img src="deputy4.png" alt="Заступник 4" />
+        <div class="position">Заступник</div>
+        <div class="name">Максим Кравчук</div>
+      </div>
+
+      <div class="leader-card">
+        <img src="deputy5.png" alt="Заступник 5" />
+        <div class="position">Заступник</div>
+        <div class="name">Анна Журавель</div>
+      </div>
+
+      <div class="leader-card">
+        <img src="deputy6.png" alt="Заступник 6" />
+        <div class="position">Заступник</div>
+        <div class="name">Олег Демчук</div>
+      </div>
+
     </div>
   </main>
 
   <footer>
-    &copy; 2025 МОЗ НПУ | Усі права захищені.
+    &copy; 2025 МОЗ НПУ | Всі права захищені.
   </footer>
 
 </body>
