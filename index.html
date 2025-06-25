@@ -3,79 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>МОЗ України</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>МОЗ GTA — Керівництво</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --primary: #d10000;
+      --primary-dark: #a00000;
+      --text: #4b0000;
+      --text-dark: #2a0000;
+      --bg-gradient: linear-gradient(135deg, #2a0000 0%, #d10000 70%, #ffffff 100%);
+      --card-bg: #ffe6e6;
+      --white: #ffffff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text);
+      min-height: 100vh;
+      position: relative;
     }
+
+    .logo-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .logo-bg img {
+      position: absolute;
+      width: 120px;
+      opacity: 0.08;
+      border-radius: 20px;
+    }
+
+    .logo-bg img:nth-child(1) { top: 5%; left: 5%; transform: rotate(10deg);}
+    .logo-bg img:nth-child(2) { top: 10%; left: 25%; transform: rotate(-15deg);}
+    .logo-bg img:nth-child(3) { top: 15%; left: 60%; transform: rotate(5deg);}
+    .logo-bg img:nth-child(4) { top: 30%; left: 40%; transform: rotate(-10deg);}
+    .logo-bg img:nth-child(5) { top: 35%; left: 75%; transform: rotate(20deg);}
+    .logo-bg img:nth-child(6) { top: 50%; left: 15%; transform: rotate(-5deg);}
+    .logo-bg img:nth-child(7) { top: 55%; left: 55%; transform: rotate(15deg);}
+    .logo-bg img:nth-child(8) { top: 65%; left: 80%; transform: rotate(-20deg);}
+    .logo-bg img:nth-child(9) { top: 75%; left: 35%; transform: rotate(10deg);}
+    .logo-bg img:nth-child(10){ top: 85%; left: 65%; transform: rotate(-15deg);}
+
     header {
-      background-color: #007bff;
-      color: white;
-      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px 30px;
+      border-radius: 20px;
+      margin: 30px auto 15px;
+      max-width: 1200px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 2.8rem;
+      letter-spacing: 1.2px;
       text-align: center;
+      flex: 1 1 100%;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
-    section {
-      padding: 40px 20px;
+
+    nav[aria-label="Головне меню"] {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
     }
-    h2 {
-      color: #0056b3;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      background-color: #e0eefe;
-      text-align: center;
-      padding: 20px;
-    }
-    .btn-custom {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
+
+    nav a {
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 26px;
+      border-radius: 15px;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
     }
-    .btn-custom:hover {
-      background-color: #0056b3;
+
+    nav a:hover {
+      background: var(--primary-dark);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 45px 35px;
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      color: var(--text);
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .leadership {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .leader-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(209, 0, 0, 0.3);
+      width: 150px;
+      padding: 20px 15px 35px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .leader-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(209, 0, 0, 0.5);
+    }
+
+    .leader-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      margin-bottom: 15px;
+      background: var(--white);
+    }
+
+    .leader-card .position {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .leader-card .name {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 10px;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      .leader-card {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Медичний Оздоровчий Загін (МОЗ)</h1>
-  <p>Підрозділ медичної допомоги в умовах GTA-операцій</p>
-</header>
+  <div class="logo-bg" aria-hidden="true">
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+  </div>
 
-<section>
-  <h2>Про нас</h2>
-  <p>МОЗ — це медичний підрозділ, який забезпечує евакуацію поранених, лікування та медичну підтримку бійців. Співпрацюємо із ЗСУ та СБУ.</p>
-</section>
+  <header>
+    <h1>Медичний Оздоровчий Загін (МОЗ)</h1>
+    <nav aria-label="Головне меню">
+      <a href="index.html">Головна</a>
+      <a href="trenuvannya.html">Тренування</a>
+      <a href="sklad.html">Склад</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Команда</h2>
-  <ul>
-    <li>👨‍⚕️ Капітан Андрій Сич — головний лікар</li>
-    <li>👩‍⚕️ Лейтенант Ірина Бондар — фельдшер</li>
-    <li>👨‍⚕️ Сержант Михайло Грін — бойовий медик</li>
-  </ul>
-</section>
+  <main>
+    <h2>Керівництво МОЗ</h2>
+    <div class="leadership">
+      <div class="leader-card">
+        <img src="medic1.png" alt="Капітан Ігор Білий" />
+        <div class="position">Капітан</div>
+        <div class="name">Ігор Білий</div>
+      </div>
 
-<section>
-  <h2>Структура</h2>
-  <ul>
-    <li>🚑 Медична евакуація</li>
-    <li>🏥 Польовий госпіталь</li>
-    <li>📦 Медичне постачання</li>
-  </ul>
-</section>
+      <div class="leader-card">
+        <img src="medic2.png" alt="Лейтенант Юлія Червона" />
+        <div class="position">Лейтенант</div>
+        <div class="name">Юлія Червона</div>
+      </div>
 
-<section class="text-center">
-  <h2>Подати заявку</h2>
-  <p>Бажа
+      <div class="leader-card">
+        <img src="medic3.png" alt="Фельдшер Артем Синій" />
+        <div class="position">Фельдшер</div>
+        <div class="name">Артем Синій</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 МОЗ GTA — Всі права захищені
+  </footer>
+
+</body>
+</html>
