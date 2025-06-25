@@ -3,38 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>НПУ GTA — Керівництво</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <title>МОЗ НПУ — Керівництво</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --black: #0d0d0d;
-      --dark-gray: #1a1a1a;
-      --red: #e50914;
-      --light-red: #ff4c4c;
-      --white: #f5f5f5;
-      --text: #cccccc;
+      --bg: #fff0f5;
+      --primary: #ff69b4;
+      --accent: #dda0dd;
+      --card: #ffe6f0;
+      --text: #551a4a;
+      --white: #ffffff;
     }
 
     body {
       margin: 0;
-      font-family: 'Roboto Condensed', sans-serif;
-      background-color: var(--black);
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #fce4ec, #f3e5f5);
       color: var(--text);
     }
 
     header {
-      background: var(--dark-gray);
-      padding: 20px 30px;
+      background: var(--white);
+      padding: 25px 20px;
       text-align: center;
-      border-bottom: 3px solid var(--red);
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.25);
+      border-bottom: 4px solid var(--primary);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      color: var(--red);
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 2.4rem;
+      color: var(--primary);
+      letter-spacing: 1px;
     }
 
     nav {
@@ -42,57 +42,56 @@
     }
 
     nav a {
-      color: var(--white);
-      background: var(--red);
+      display: inline-block;
+      margin: 6px;
       padding: 10px 20px;
-      margin: 5px;
-      border-radius: 4px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 25px;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      transition: background 0.3s;
     }
 
     nav a:hover {
-      background: var(--light-red);
+      background: var(--primary);
     }
 
     main {
       max-width: 1000px;
       margin: 40px auto;
       padding: 30px;
-      background: var(--dark-gray);
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
     }
 
     main h2 {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: var(--primary);
     }
 
     .leadership {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 25px;
-      justify-items: center;
     }
 
     .leader-card {
-      background: #111;
-      padding: 20px 15px;
-      border: 2px solid var(--red);
-      border-radius: 10px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 20px;
+      width: 160px;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 5px 15px rgba(221, 160, 221, 0.3);
+      transition: transform 0.3s ease;
     }
 
     .leader-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px var(--red);
+      transform: translateY(-5px);
     }
 
     .leader-card img {
@@ -100,36 +99,36 @@
       height: 100px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid var(--light-red);
+      border: 3px solid var(--primary);
+      background: var(--white);
       margin-bottom: 12px;
-      filter: grayscale(100%);
     }
 
     .position {
-      color: var(--light-red);
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-      font-weight: bold;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 5px;
     }
 
     .name {
-      color: var(--white);
       font-size: 1.1rem;
+      color: var(--text);
       font-weight: 700;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #666;
-      font-size: 0.9rem;
+      color: #aa6699;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>НПУ GTA: Керівництво</h1>
+    <h1>МОЗ — Керівництво</h1>
     <nav>
       <a href="index.html">Головна</a>
       <a href="nakazy.html">Накази</a>
@@ -138,55 +137,9 @@
   </header>
 
   <main>
-    <h2>Керівництво підрозділу</h2>
+    <h2>Наші Лідери</h2>
     <div class="leadership">
       <div class="leader-card">
         <img src="general.png" alt="Генерал Ваня Бішоп" />
         <div class="position">Генерал</div>
-        <div class="name">Ваня Бішоп</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Іван Коваль" />
-        <div class="position">Полковник</div>
-        <div class="name">Іван Коваль</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Олена Мельник" />
-        <div class="position">Полковник</div>
-        <div class="name">Олена Мельник</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Сергій Петренко" />
-        <div class="position">Полковник</div>
-        <div class="name">Сергій Петренко</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Вакантно" />
-        <div class="position">Полковник</div>
-        <div class="name">Вакантно</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Вакантно" />
-        <div class="position">Полковник</div>
-        <div class="name">Вакантно</div>
-      </div>
-
-      <div class="leader-card">
-        <img src="polkovnik.png" alt="Вакантно" />
-        <div class="position">Полковник</div>
-        <div class="name">Вакантно</div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    © 2025 НПУ GTA — Всі права захищені
-  </footer>
-
-</body>
-</html>
+        <div class="name">Ваня Б
