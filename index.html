@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>МОЗ НПУ — Керівництво</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МОЗ НПУ | Керівництво</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg1: #ffe6f0;
-      --bg2: #fce4ec;
-      --primary: #ff69b4;
-      --accent: #dda0dd;
-      --card: #fff5fa;
-      --text: #551a4a;
-      --white: #ffffff;
+      --bg-gradient: linear-gradient(135deg, #1e1e2f, #2d0033);
+      --primary: #ff0077;
+      --secondary: #6f42c1;
+      --text-light: #f0e7f5;
+      --card-bg: #2c2c3e;
+      --border: #ff69b4;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-light);
     }
 
     header {
-      background: var(--white);
+      background: rgba(0,0,0,0.5);
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25);
-      border-bottom: 4px solid var(--primary);
-      position: relative;
+      border-bottom: 2px solid var(--border);
     }
 
-    header img.logo {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
+    header img {
+      width: 80px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.2rem;
+      margin: 10px 0 0;
+      font-family: 'Russo One', sans-serif;
       color: var(--primary);
+      font-size: 2.5rem;
     }
 
     nav {
@@ -51,155 +49,125 @@
     }
 
     nav a {
-      display: inline-block;
-      margin: 6px;
-      padding: 10px 20px;
-      background: var(--accent);
-      color: var(--white);
-      border-radius: 25px;
+      color: var(--text-light);
       text-decoration: none;
+      margin: 0 10px;
       font-weight: 600;
-      transition: background 0.3s;
+      padding: 6px 12px;
+      border: 1px solid transparent;
+      border-radius: 5px;
     }
 
     nav a:hover {
-      background: var(--primary);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 30px;
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    }
-
-    main h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
+      border-color: var(--primary);
       color: var(--primary);
     }
 
-    .leadership {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .leaders {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
     }
 
-    .leader-card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 20px;
-      width: 160px;
+    .card {
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(221, 160, 221, 0.3);
+      box-shadow: 0 0 15px rgba(255, 0, 119, 0.3);
       transition: transform 0.3s ease;
     }
 
-    .leader-card:hover {
+    .card:hover {
       transform: translateY(-5px);
     }
 
-    .leader-card img {
+    .card img {
       width: 90px;
       height: 90px;
-      object-fit: cover;
       border-radius: 50%;
       border: 3px solid var(--primary);
-      background: var(--white);
       margin-bottom: 10px;
     }
 
     .position {
-      color: var(--accent);
       font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 5px;
+      color: var(--primary);
+      margin-bottom: 4px;
     }
 
     .name {
-      font-size: 1.05rem;
-      color: var(--text);
-      font-weight: 700;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #aa6699;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="logo.png" alt="Логотип МОЗ" class="logo" />
-    <h1>МОЗ — Керівництво</h1>
+    <img src="assets/images/logo.png" alt="МОЗ Логотип">
+    <h1>МОЗ НПУ — Керівництво</h1>
     <nav>
       <a href="#">Головна</a>
       <a href="#">Накази</a>
-      <a href="#">Графік</a>
+      <a href="#">Контакти</a>
     </nav>
   </header>
 
   <main>
-    <h2>Наше Керівництво</h2>
-    <div class="leadership">
-
-      <!-- Лідер -->
-      <div class="leader-card">
-        <img src="leader1.png" alt="Генерал Ваня Бішоп" />
+    <div class="leaders">
+      <div class="card">
+        <img src="assets/images/leader1.png" alt="Ваня Бішоп">
         <div class="position">Генерал</div>
         <div class="name">Ваня Бішоп</div>
       </div>
 
-      <!-- Заступники -->
-      <div class="leader-card">
-        <img src="deputy1.png" alt="Заступник 1" />
+      <div class="card">
+        <img src="assets/images/deputy1.png" alt="Заступник 1">
         <div class="position">Заступник</div>
-        <div class="name">Олена Войтюк</div>
+        <div class="name">Олег Коваль</div>
       </div>
-
-      <div class="leader-card">
-        <img src="deputy2.png" alt="Заступник 2" />
+      <div class="card">
+        <img src="assets/images/deputy2.png" alt="Заступник 2">
         <div class="position">Заступник</div>
-        <div class="name">Петро Савчук</div>
+        <div class="name">Ірина Савчук</div>
       </div>
-
-      <div class="leader-card">
-        <img src="deputy3.png" alt="Заступник 3" />
+      <div class="card">
+        <img src="assets/images/deputy3.png" alt="Заступник 3">
         <div class="position">Заступник</div>
-        <div class="name">Ірина Коваль</div>
+        <div class="name">Артем Лисенко</div>
       </div>
-
-      <div class="leader-card">
-        <img src="deputy4.png" alt="Заступник 4" />
+      <div class="card">
+        <img src="assets/images/deputy4.png" alt="Заступник 4">
         <div class="position">Заступник</div>
-        <div class="name">Максим Кравчук</div>
+        <div class="name">Наталія Юрченко</div>
       </div>
-
-      <div class="leader-card">
-        <img src="deputy5.png" alt="Заступник 5" />
+      <div class="card">
+        <img src="assets/images/deputy5.png" alt="Заступник 5">
         <div class="position">Заступник</div>
-        <div class="name">Анна Журавель</div>
+        <div class="name">Руслан Донець</div>
       </div>
-
-      <div class="leader-card">
-        <img src="deputy6.png" alt="Заступник 6" />
+      <div class="card">
+        <img src="assets/images/deputy6.png" alt="Заступник 6">
         <div class="position">Заступник</div>
-        <div class="name">Олег Демчук</div>
+        <div class="name">Людмила Чорна</div>
       </div>
-
     </div>
   </main>
 
   <footer>
-    &copy; 2025 МОЗ НПУ | Всі права захищені.
+    &copy; 2025 МОЗ НПУ. Всі права захищено.
   </footer>
-
 </body>
 </html>
