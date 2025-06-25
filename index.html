@@ -1,173 +1,262 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>МОЗ НПУ | Керівництво</title>
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>МОЗ GTA — Керівництво</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #1e1e2f, #2d0033);
-      --primary: #ff0077;
-      --secondary: #6f42c1;
-      --text-light: #f0e7f5;
-      --card-bg: #2c2c3e;
-      --border: #ff69b4;
-    }
-
-    * {
-      box-sizing: border-box;
+      --primary: #d61a5e;
+      --primary-dark: #aa114b;
+      --text: #660027;
+      --text-dark: #4a001e;
+      --bg-gradient: linear-gradient(135deg, #4a001e 0%, #d61a5e 70%, #fff0f5 100%);
+      --card-bg: #ffe6f0;
+      --white: #ffffff;
     }
 
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: var(--bg-gradient);
-      color: var(--text-light);
+      color: var(--text);
+      min-height: 100vh;
+      position: relative;
     }
+
+    .logo-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .logo-bg img {
+      position: absolute;
+      width: 120px;
+      opacity: 0.08;
+      border-radius: 20px;
+    }
+    .logo-bg img:nth-child(1) { top: 5%; left: 5%; transform: rotate(10deg);}
+    .logo-bg img:nth-child(2) { top: 10%; left: 25%; transform: rotate(-15deg);}
+    .logo-bg img:nth-child(3) { top: 15%; left: 60%; transform: rotate(5deg);}
+    .logo-bg img:nth-child(4) { top: 30%; left: 40%; transform: rotate(-10deg);}
+    .logo-bg img:nth-child(5) { top: 35%; left: 75%; transform: rotate(20deg);}
+    .logo-bg img:nth-child(6) { top: 50%; left: 15%; transform: rotate(-5deg);}
+    .logo-bg img:nth-child(7) { top: 55%; left: 55%; transform: rotate(15deg);}
+    .logo-bg img:nth-child(8) { top: 65%; left: 80%; transform: rotate(-20deg);}
+    .logo-bg img:nth-child(9) { top: 75%; left: 35%; transform: rotate(10deg);}
+    .logo-bg img:nth-child(10){ top: 85%; left: 65%; transform: rotate(-15deg);}
 
     header {
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid var(--border);
-    }
-
-    header img {
-      width: 80px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px 30px;
+      border-radius: 20px;
+      margin: 30px auto 15px;
+      max-width: 1200px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1;
     }
 
     header h1 {
-      margin: 10px 0 0;
-      font-family: 'Russo One', sans-serif;
-      color: var(--primary);
-      font-size: 2.5rem;
+      margin: 0;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 2.6rem;
+      letter-spacing: 1.2px;
+      text-align: center;
+      flex: 1 1 100%;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
-    nav {
+    nav[aria-label="Головне меню"] {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 15px;
     }
 
     nav a {
-      color: var(--text-light);
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 26px;
+      border-radius: 15px;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: 600;
-      padding: 6px 12px;
-      border: 1px solid transparent;
-      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-      border-color: var(--primary);
-      color: var(--primary);
+      background: var(--primary-dark);
     }
 
     main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .leaders {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      padding: 15px;
-      border-radius: 12px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      background: rgba(255, 255, 255, 0.93);
+      padding: 45px 35px;
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      color: var(--text);
       text-align: center;
-      box-shadow: 0 0 15px rgba(255, 0, 119, 0.3);
-      transition: transform 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    main h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      font-weight: 700;
     }
 
-    .card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 3px solid var(--primary);
-      margin-bottom: 10px;
+    .leadership {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
     }
 
-    .position {
+    .leader-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(214, 26, 94, 0.25);
+      width: 150px;
+      padding: 20px 15px 35px;
+      color: var(--primary-dark);
       font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 4px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .name {
+    .leader-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(214, 26, 94, 0.5);
+    }
+
+    .leader-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      margin-bottom: 15px;
+      background: var(--white);
+    }
+
+    .leader-card .position {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .leader-card .name {
       font-size: 1.1rem;
+      color: var(--text-dark);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #999;
+      padding: 22px 10px;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      .leader-card {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <div class="logo-bg" aria-hidden="true">
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+    <img src="logo.png" alt="" />
+  </div>
+
   <header>
-    <img src="assets/images/logo.png" alt="МОЗ Логотип">
-    <h1>МОЗ НПУ — Керівництво</h1>
-    <nav>
-      <a href="#">Головна</a>
-      <a href="#">Накази</a>
-      <a href="#">Контакти</a>
+    <h1>Міністерство Охорони Здоров'я Південної України</h1>
+    <nav aria-label="Головне меню">
+      <a href="index.html">Головна</a>
+      <a href="nakazy.html">Накази МОЗ</a>
+      <a href="grafik.html">Графік Роботи</a>
     </nav>
   </header>
 
   <main>
-    <div class="leaders">
-      <div class="card">
-        <img src="assets/images/leader1.png" alt="Ваня Бішоп">
-        <div class="position">Генерал</div>
-        <div class="name">Ваня Бішоп</div>
+    <h2>Керівництво</h2>
+    <div class="leadership">
+
+      <div class="leader-card">
+        <img src="minister.png" alt="Міністр МОЗ" />
+        <div class="position">Міністр</div>
+        <div class="name">Ірина Гром</div>
       </div>
 
-      <div class="card">
-        <img src="assets/images/deputy1.png" alt="Заступник 1">
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Олег Коваль</div>
+        <div class="name">Олег Савчук</div>
       </div>
-      <div class="card">
-        <img src="assets/images/deputy2.png" alt="Заступник 2">
+
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Ірина Савчук</div>
+        <div class="name">Марина Жук</div>
       </div>
-      <div class="card">
-        <img src="assets/images/deputy3.png" alt="Заступник 3">
+
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Артем Лисенко</div>
+        <div class="name">Ігор Клименко</div>
       </div>
-      <div class="card">
-        <img src="assets/images/deputy4.png" alt="Заступник 4">
+
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Наталія Юрченко</div>
+        <div class="name">Тетяна Гаврилюк</div>
       </div>
-      <div class="card">
-        <img src="assets/images/deputy5.png" alt="Заступник 5">
+
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Руслан Донець</div>
+        <div class="name">Назар Войтенко</div>
       </div>
-      <div class="card">
-        <img src="assets/images/deputy6.png" alt="Заступник 6">
+
+      <div class="leader-card">
+        <img src="zam.png" alt="Заступник" />
         <div class="position">Заступник</div>
-        <div class="name">Людмила Чорна</div>
+        <div class="name">Вакантно</div>
       </div>
+
     </div>
   </main>
 
   <footer>
-    &copy; 2025 МОЗ НПУ. Всі права захищено.
+    © 2025 МОЗ GTA — Всі права захищені
   </footer>
+
 </body>
 </html>
